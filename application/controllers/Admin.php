@@ -7,13 +7,14 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+        $this->load->model('Maps_model');
     }
 
     public function index()
     {
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $data['map'] = $this->db->get('map')->row_array();
+        $data['map'] = $this->Maps_model->getDefault();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
