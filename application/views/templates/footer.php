@@ -60,7 +60,7 @@
  <script src="<?= base_url('assets/'); ?>js/demo/datatables-demo.js"></script>
 
  <!-- api key untuk map -->
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2OH3oaVuCOsZsRT6E39A1v0l1RYEL53k&language=id&region=ID"></script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=Your_API_Key&language=id&region=ID"></script>
 
  <script>
      $('.custom-file-input').on('change', function() {
